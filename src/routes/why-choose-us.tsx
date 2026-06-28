@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Clock, Scale, Network, BadgeIndianRupee, Sparkles, Users, Heart, Rocket } from "lucide-react";
-import logoAsset from "@/assets/logo.png.asset.json";
+import logoAsset from "@/assets/logo.png";
 import { PHONE_1, waLink } from "@/lib/products";
 
 export const Route = createFileRoute("/why-choose-us")({
@@ -35,7 +35,7 @@ function WhyChooseUsPage() {
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/85 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Neelkanth" className="h-11 w-auto" />
+            <img src={logoAsset} alt="Neelkanth" className="h-11 w-auto" />
             <div className="leading-tight hidden sm:block">
               <div className="font-display font-bold text-sm">Neelkanth Rockminerals</div>
               <div className="text-[10px] text-muted-foreground">Industries · Since 2021</div>

@@ -1,10 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Phone, Mail, MapPin, MessageCircle, Award, FileText, Factory, Leaf, ShieldCheck, Truck, ChevronRight, Menu, X, Building2 } from "lucide-react";
-import ownerAsset from "@/assets/owner.png.asset.json";
-import logoAsset from "@/assets/logo.png.asset.json";
-import isoCert from "@/assets/iso-certificate.pdf.asset.json";
-import udyamCert from "@/assets/udyam-certificate.pdf.asset.json";
+import ownerAsset from "@/assets/owner.png";
+import logoAsset from "@/assets/logo.png";
+import isoCert from "@/assets/iso.pdf";
+import udyamCert from "@/assets/udyam.pdf";
 import { products, PHONE_1, PHONE_2, EMAIL, EMAIL_2, waLink } from "@/lib/products";
 
 export const Route = createFileRoute("/")({
@@ -36,7 +36,7 @@ function Home() {
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/85 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <a href="#home" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Neelkanth Rock Mineral Industries" className="h-11 w-auto" />
+            <img src={logoAsset} alt="Neelkanth Rock Mineral Industries" className="h-11 w-auto" />
             <div className="leading-tight hidden sm:block">
               <div className="font-display font-bold text-sm">Neelkanth Rockminerals</div>
               <div className="text-[10px] text-muted-foreground">Industries · Since 2021</div>
@@ -111,7 +111,7 @@ function Home() {
           <div className="hidden lg:flex items-center justify-center">
             <div className="relative">
               <div className="absolute inset-0 rounded-full blur-3xl opacity-40" style={{ background: "var(--gradient-accent)" }} />
-              <img src={logoAsset.url} alt="Neelkanth Logo" className="relative w-80 h-auto float-slow drop-shadow-2xl" style={{ filter: "drop-shadow(0 25px 40px rgba(0,0,0,0.5))" }} />
+              <img src={logoAsset} alt="Neelkanth Logo" className="relative w-80 h-auto float-slow drop-shadow-2xl" style={{ filter: "drop-shadow(0 25px 40px rgba(0,0,0,0.5))" }} />
             </div>
           </div>
         </div>
@@ -123,7 +123,7 @@ function Home() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-2xl opacity-20 blur-2xl" style={{ background: "var(--gradient-accent)" }} />
             <div className="relative rounded-2xl overflow-hidden tilt-card" style={{ boxShadow: "var(--shadow-elegant)" }}>
-              <img src={ownerAsset.url} alt="Mr. Sawai Singh, CEO" className="w-full aspect-square object-cover" />
+              <img src={ownerAsset} alt="Mr. Sawai Singh, CEO" className="w-full aspect-square object-cover" />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-card rounded-xl p-4 border border-border max-w-[200px]" style={{ boxShadow: "var(--shadow-card)" }}>
               <div className="text-xs text-muted-foreground">Founder & CEO</div>
@@ -226,8 +226,8 @@ function Home() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {[
-              { name: "ISO Certificate", desc: "Quality management certification verifying our manufacturing standards.", url: isoCert.url, icon: Award },
-              { name: "Udyam Registration", desc: "Government of India MSME registration certificate.", url: udyamCert.url, icon: FileText },
+              { name: "ISO Certificate", desc: "Quality management certification verifying our manufacturing standards.", url: isoCert, icon: Award },
+              { name: "Udyam Registration", desc: "Government of India MSME registration certificate.", url: udyamCert, icon: FileText },
             ].map(({ name, desc, url, icon: Icon }) => (
               <a key={name} href={url} target="_blank" rel="noopener" className="tilt-card group flex gap-5 p-6 rounded-xl border border-border bg-card hover:border-accent transition" style={{ boxShadow: "var(--shadow-card)" }}>
                 <div className="w-14 h-14 rounded-lg flex items-center justify-center shrink-0" style={{ background: "var(--gradient-accent)" }}>
@@ -254,7 +254,7 @@ function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <img src={logoAsset.url} alt="" className="h-12 w-auto bg-white/95 p-1 rounded-md" />
+              <img src={logoAsset} alt="" className="h-12 w-auto bg-white/95 p-1 rounded-md" />
               <div>
                 <div className="font-display font-bold">Neelkanth</div>
                 <div className="text-xs text-white/60">Rock Mineral Industries</div>

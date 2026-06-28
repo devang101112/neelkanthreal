@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, CheckCircle2, Award, Globe, Users, Factory, Leaf } from "lucide-react";
-import ownerAsset from "@/assets/owner.png.asset.json";
-import logoAsset from "@/assets/logo.png.asset.json";
+import ownerAsset from "@/assets/owner.png";
+import logoAsset from "@/assets/logo.png";
 import { PHONE_1, EMAIL, waLink } from "@/lib/products";
 
 export const Route = createFileRoute("/about")({
@@ -44,7 +44,7 @@ function AboutPage() {
       <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/85 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Neelkanth" className="h-11 w-auto" />
+            <img src={logoAsset} alt="Neelkanth" className="h-11 w-auto" />
             <div className="leading-tight hidden sm:block">
               <div className="font-display font-bold text-sm">Neelkanth Rockminerals</div>
               <div className="text-[10px] text-muted-foreground">Industries · Since 2021</div>
@@ -78,7 +78,7 @@ function AboutPage() {
           <div className="relative">
             <div className="absolute -inset-4 rounded-2xl opacity-25 blur-2xl" style={{ background: "var(--gradient-accent)" }} />
             <div className="relative rounded-2xl overflow-hidden tilt-card" style={{ boxShadow: "var(--shadow-elegant)" }}>
-              <img src={ownerAsset.url} alt="Mr. Sawai Singh, Founder & CEO" className="w-full aspect-square object-cover" />
+              <img src={ownerAsset} alt="Mr. Sawai Singh, Founder & CEO" className="w-full aspect-square object-cover" />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-card rounded-xl p-4 border border-border max-w-[220px]" style={{ boxShadow: "var(--shadow-card)" }}>
               <div className="text-xs text-muted-foreground">Founder & CEO</div>

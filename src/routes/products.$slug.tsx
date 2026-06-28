@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState } from "react";
 import { Phone, MessageCircle, ChevronRight, ArrowLeft, Package, FlaskConical, CheckCircle2, Mail } from "lucide-react";
 import { getProduct, products, PHONE_1, EMAIL, waLink } from "@/lib/products";
-import logoAsset from "@/assets/logo.png.asset.json";
+import logoAsset from "@/assets/logo.png";
 
 export const Route = createFileRoute("/products/$slug")({
   loader: ({ params }) => {
@@ -42,7 +42,7 @@ function ProductPage() {
       <header className="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Neelkanth Rock Mineral Industries" className="h-10 w-auto" />
+            <img src={logoAsset} alt="Neelkanth Rock Mineral Industries" className="h-10 w-auto" />
             <div className="leading-tight hidden sm:block">
               <div className="font-display font-bold text-sm">Neelkanth Rockminerals</div>
               <div className="text-[10px] text-muted-foreground">Industries · Since 2021</div>
